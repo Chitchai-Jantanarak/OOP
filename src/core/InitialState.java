@@ -171,5 +171,4 @@ public class InitialState extends JPanel implements MouseListener, KeyListener {
 
         describeState.requestFocusInWindow();
     }
-
 }
