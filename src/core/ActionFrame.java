@@ -122,8 +122,6 @@ public class ActionFrame extends JPanel implements Runnable {
         Graphics2D g2d = (Graphics2D) g;
         if (images != null){
             Drawer.drawAction(g2d, images[currentFrameImage], positionX, positionY);
-        }
-        
+        }   
     }
-
 }
