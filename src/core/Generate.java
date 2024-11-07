@@ -126,7 +126,6 @@ class Generate {
             Integer positionX = rand.nextInt(0, Setting.GRIDSIZE);
             Integer positionY = rand.nextInt(0, Setting.GRIDSIZE);
             map.set(positionX, positionY);
-            // System.out.println(positionX + " " +  positionY + " " + GameState.Map.getFirst().get(map.getFirst()).get(map.getSecond()) + GameState.Map.getSecond().get(map.getFirst()).get(map.getSecond()) );
         } while (GameState.Map.getFirst().get(map.getFirst()).get(map.getSecond()) == 1 ||
          GameState.Map.getSecond().get(map.getFirst()).get(map.getSecond()) != 'E'); // regenerate
 
@@ -140,8 +139,6 @@ class Generate {
         e.setPosition(position.getFirst(), position.getSecond());
         e.setVisualPosition();
         GameState.Map.getSecond().get(position.getFirst()).set(position.getSecond(), e.getCharRepresented());
-
-        // prindGridGenerated();
     }
 
     public static int randomIntWithSettingGridBound () {
