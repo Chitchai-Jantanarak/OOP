@@ -69,8 +69,6 @@ class GameButton extends JButton {
     protected void paintComponent (Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
 
-        // g2d.setColor(Color.GREEN);
-        // g2d.fillRect(0, 0, getWidth(), getHeight());
         if (btnImage != null) {
 
             if (isEnabled()){
@@ -86,5 +84,3 @@ class GameButton extends JButton {
 
     }   
 }
-
-// setForeGround (Color..)
