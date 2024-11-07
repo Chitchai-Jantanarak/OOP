@@ -71,6 +71,7 @@ class GameState extends JPanel implements MouseListener, KeyListener {
     private Theme theme;
     private Color backgroundColor     = new Color(33, 26, 40); // Prevent Theme error
 
+    
     // Hard code locate - Images
     private Image tileImage;
     private Image tileTrapImage;
@@ -83,7 +84,7 @@ class GameState extends JPanel implements MouseListener, KeyListener {
     private HPBar  jpnHPBarP2;
     private JLabel jlbTurn;
     private JLabel jlbMoveTurn;
-    private JLabel jlbNotify; // Public for setting at logic
+    private JLabel jlbNotify;
     private JLabel jlbEndGame;
     private JLabel jlbTimer;
 
@@ -104,6 +105,7 @@ class GameState extends JPanel implements MouseListener, KeyListener {
     private Fonts fontsTitle          = new Fonts(144.0);
     private Font defaultTitle         = fontsTitle.getFontAt(0);
 
+    
     // For logic & toggle button
     private int buttonDrawRange;
     private String actionKeyword;
@@ -118,6 +120,7 @@ class GameState extends JPanel implements MouseListener, KeyListener {
     // Calling default constructor is not permitted
     public GameState() {}
 
+    
     /**
      *  @param characterInfo
      *  GameState MUST get selection info
@@ -226,7 +229,6 @@ class GameState extends JPanel implements MouseListener, KeyListener {
 
         endTurnButton = new GameButton(defaultNormal, "END TURN", new ButtonImage("ENDTURN"),
          e -> {
-            // System.out.println("______________________________________________");
 
             // Async Prevention
             endTurnButton.setEnabled(false);
@@ -237,16 +239,6 @@ class GameState extends JPanel implements MouseListener, KeyListener {
             finally {
                 endTurnButton.setEnabled(true);
             }
-            
-            // System.out.println(P1.getSelf().getTurn());
-            // System.out.println(P1.getSelf().getAttackTurn());
-            // System.out.println(P1.getSelf().getSkillTurn());
-            // System.out.println(P1.getSelf().getTrapTurn());
-            // System.out.println("-----------------------");
-            // System.out.println(P2.getSelf().getTurn());
-            // System.out.println(P2.getSelf().getAttackTurn());
-            // System.out.println(P2.getSelf().getSkillTurn());
-            // System.out.println(P2.getSelf().getTrapTurn());
             
             jlbMoveTurn.setText("Move Turn : " + nowTurn.getSelf().getTurn());
             Logic.clearSprites(sprites);
