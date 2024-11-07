@@ -20,7 +20,7 @@ class Caster extends Entities implements Attackable, Shootable, Trapable {
         collectImage(side);
     }
 
-	protected void collectImage(char side){
+    protected void collectImage(char side){
         images = new Image[8]; // Hard Code Size
 
         if (side != 'R' && side != 'B'){          
