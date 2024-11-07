@@ -57,14 +57,3 @@ public class Setting {
     // Hard Setting
     public static boolean WINDOWS_RESIZABLE         = false;
 }
-
-
-/*
-    new Color(33, 26, 40)
-
- *  Directory Paths
- *  "/resources/"
- *  
- *  img  : "/resources/img/" 
- *  font : "/resources/font/"
- */ 
