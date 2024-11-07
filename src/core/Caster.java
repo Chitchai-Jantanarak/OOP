@@ -62,7 +62,6 @@ class Caster extends Entities implements Attackable, Shootable, Trapable {
     @Override
     protected void resetTrapTurn() {
         // Always added the trap of caster will add as collection
-        // if (this.trapTurn == Setting.CASTER_TRAPTURN) { return; }
         this.trapTurn++;
         setTrapCollection(trapTurn / Setting.CASTER_TRAPTURN);
     }
@@ -73,12 +72,8 @@ class Caster extends Entities implements Attackable, Shootable, Trapable {
     @Override
     public boolean attacking(Entities e) {
         if (e == null || attackTurn == 0) { return false; }
-        
         e.setHealthPoint(e.getHealthPoint() - this.attackPoint);
-        
         this.setAttackTurn(this.getAttackTurn() - this.attackPoint);
-
-        // System.out.println(e.getHealthPoint());
         return true;
     }
 
@@ -100,6 +95,4 @@ class Caster extends Entities implements Attackable, Shootable, Trapable {
         setTrapCollection(trapTurn / Setting.CASTER_TRAPTURN);
         return true;
     }
-
-    
 }
