@@ -61,8 +61,6 @@ class TurnManager {
     }
 
     public synchronized void nextTurn() {
-        // System.out.println("nextTurn called");
-    
         // Prevent multiple executions and ensure timer is not running
         if (turnProgresses) return;
         turnProgresses = true;
