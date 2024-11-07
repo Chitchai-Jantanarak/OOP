@@ -78,7 +78,6 @@ class Pathfinder extends Entities implements Attackable, Fillable {
             this.setAttackTurn(this.getAttackTurn() - 1);
         }
 
-        // System.out.println(e.getHealthPoint());
         return true;
     }
 
@@ -89,5 +88,4 @@ class Pathfinder extends Entities implements Attackable, Fillable {
         setFillCollection((int)(fillTurn / Setting.PATHFINDER_FILLTURN));
         return true;
     }
-
 }
