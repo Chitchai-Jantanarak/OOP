@@ -79,16 +79,11 @@ class TurnManager {
         } else {
             turn++;
         }
-    
-        // System.out.println("BEFORE : " + nowTurn.getSelf().getCharRepresented());
 
         updateNowTurn();
         game.updateButtons();
         game.resetMouseAction();
 
-        // System.out.println("AFTER : " + nowTurn.getSelf().getCharRepresented());
-        // System.out.println("______________________________________________");
-    
         startTimer();
     
         turnProgresses = false;
@@ -109,7 +104,6 @@ class TurnManager {
      * @see GameButton#endTurnButton
      */
     public synchronized void endTurn() {
-        // System.out.println("endTurn called");
         if (timer != null && timer.isAlive()) {
             timer.interrupt();
         }
@@ -145,7 +139,6 @@ class TurnManager {
             sprites.add(slime);
 
             currentSpawnRate -= Setting.MOB_SPAWNBOUND;
-            // System.out.println(currentSpawnRate);
             isSpawned = true;
         }
 
@@ -222,20 +215,15 @@ class TurnManager {
     private void updateNowTurn() {
        
         if (P1 == null || P2 == null) return;
-        // System.out.println();
 
         if (startWithP1) {
             nowTurn = (this.turn == 0) ? P1 : P2; // P1 starts first
         } else {
             nowTurn = (this.turn == 0) ? P2 : P1; // P2 starts first
         }
-        // System.out.println("/// SETTER");
-        // System.out.println(nowTurn.getSelf().getCharRepresented());
+
         game.setNowTurn(nowTurn);
         jlbNotify.setText(game.getWhoTurn() + " Turn");
-        // System.out.println(game.getNowTurn().getSelf().getCharRepresented());
-        // System.out.println("///");
-
     }
 
     /**
