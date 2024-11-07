@@ -35,7 +35,7 @@ public class Setting {
 
     /* Mob logic */
     public static final int MOB_ATTACKPOINT         = 1;
-    public static final int MOB_SPAWNRATE           = 5;  // As 0.1 Indicator
+    public static final int MOB_SPAWNRATE           = 5;   // As 0.5 Indicator
     public static final int MOB_SPAWNBOUND          = 100; // As per spawn once
     public static final int MOB_HEALTHPOINT         = 1;
     public static final int MOBS_SKILLTURN          = 2;
