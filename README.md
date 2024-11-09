@@ -1,6 +1,6 @@
 # My first Try Individual Project :)
-# GRID WITH PALS
-![Game Image](src/resources/img/grid/GF2.png)
+<h1>GRID WITH PALS</h1>
+![Game Image](src/resources/img/describe/gameplay.png)
 
 ## Game Overview
 This game is **"grid-based gameplay"** where two players take turns to compete. The goal is for each player to control one of the two available characters: **"Pathfinder"** and **"Caster"**, each with unique abilities that help them survive.
@@ -17,3 +17,4 @@ This game is **"grid-based gameplay"** where two players take turns to compete. 
 - **`src/`** 
   - **`src/core/`**     : Contains core game source classes.
   - **`src/resources/`**: Contains all game resources (images, fonts).
+  - **`src/Game.java/`**: Main class for running.
